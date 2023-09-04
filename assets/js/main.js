@@ -2,14 +2,6 @@
 
 $(function(){
 
-  //스크롤 천천히
- /*  $(function() {
-
-    $(this).impulse();
-    $('html').impulse({effect: 'easeOutSine', fluid: false});
-  });
-   */
-  
     // loder 영역
 
     $(document).ready(function() {
@@ -33,7 +25,8 @@ $(function(){
           trigger: 'main', 
           scrub:0.5,
           start: '0% 0%', 
-          end: '0% 100%', 
+          end: '5% 100%', 
+          markers:true
       },
           opacity:1
 
@@ -140,6 +133,20 @@ $(function(){
 
     footer.from('footer',3,{opacity:0, yPercent:50,delay:1})
 
+
+
     
+    lastWidth = window.innerWidth;
+    $(window).resize(function(){
+    if(window.innerWidth != lastWidth){
+            location.reload();
+            scrollTrigger.refresh();
+    }
+    lastWidth = window.innerWidth;
+    });
+
+    $(window).scroll(function(){
+        ScrollTrigger.refresh(true)
+    })
 
 })

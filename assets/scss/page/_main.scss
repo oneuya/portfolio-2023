@@ -170,6 +170,8 @@
         .work-item{
             position: relative;
 
+         
+
             &:hover{
                 .img-box{
                     overflow: hidden;
@@ -266,14 +268,23 @@
                 left: min(2.6vw,10px);
                 bottom: min(2.6vw,10px);
 
-
-           
-                em{
-                    font-size: 18px;
-                    background: #1414147c;
-                    padding: 7px 13px;
-                    border-radius: 20px;
+                .m{
+                    display: none;
                 }
+
+                .em-box{
+              
+    
+                    em{
+                        font-size: 15px;
+                        background: #1414147c;
+                        padding: 7px 13px;
+                        border-radius: 20px;
+                        text-align: center;
+                    }
+
+                }
+               
                 .name{
                     font-size: 40px;
                     margin-top: 13px;
@@ -292,6 +303,7 @@
                 }
                 .work-sns{
                     padding-top: 35px;
+                    font-size: 18px;
                     &.yellow{
                         a{
                             background: #fbd46d;
@@ -299,7 +311,6 @@
                             border-radius: 20px;
                             color: #141414;
                             font-weight: 600;
-                            font-size: 18px;
                         }
                     }
                     &.green{
@@ -309,7 +320,6 @@
                             border-radius: 20px;
                             color: #fff;
                             font-weight: 600;
-                            font-size: 18px;
                         }
                     }
                     &.gray{
@@ -319,7 +329,6 @@
                             border-radius: 20px;
                             color: #141414;
                             font-weight: 600;
-                            font-size: 18px;
                         }
                     }
                 }
@@ -332,4 +341,121 @@
         }
 
     }
+}
+
+@media(max-width: 940px){
+    .sc-about{
+        .about-inner{
+            .swiper-area{
+                .area-wrapper{
+                    .top-swiper{
+                        margin-right: 40px;
+                        .swiper-wrapper{
+                            .swiper-slide{
+                                .box{
+                                    .text-box{
+                                        strong{
+                                        font-size: 17px;
+                                        line-height: 25px;
+                                        }
+                                        p{
+                                        font-size: 14px;
+                                        line-height: 23px;
+                                        margin-top: 15px;
+
+                                        }
+                                        .icon-box{
+                                            img{
+                                                width: 30px;
+                                            }
+                                            .btn-box{
+                                                left: 55px;
+
+                                                .swiper-button-next{
+                                                    width: 30px;
+                                                    height: 30px;
+                                                    left: 50px;
+                                                    &::after{
+                                                        font-size: 13px;
+                                                    }
+                                                }
+                                                .swiper-button-prev{
+                                                    width: 30px;
+                                                    height: 30px;
+                                                    &::after{
+                                                        font-size: 13px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            
+                            }
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+
+    .sc-work{
+        .work-list{
+            .work-item{
+                .text-box{
+                    .em-box{
+                        line-height: 32px;
+                        .m{
+                            display: block;
+                        }
+                        em{
+                            font-size: 13px;
+                        }
+                    }
+                 .work-sns{
+                    line-height: 40px;
+                    a{
+                        font-size: 15px;
+                    }
+                 }
+                }
+            }
+        }
+    }
+
+
+}
+
+@media(max-width: 768px){
+    .sc-about{
+        .about-inner{
+            flex-direction: column;
+            gap: 100px;
+
+            .logo-area{
+                padding: 0;
+            }
+            .swiper-area{
+                width: 100%;
+                .area-wrapper{
+                    .top-swiper{
+                        padding: 0;
+                        margin: 0 auto;
+                        .swiper-wrapper{
+                            .swiper-slide{
+                                .box{
+                                    height: 250px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+    
+
 }
