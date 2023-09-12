@@ -2,18 +2,26 @@
 
 $(function(){
 
+  
+  
     // loder 영역
 
     $(document).ready(function() {
-        // 3초 후에 요소의 투명도를 0으로 설정
-        setTimeout(function() {
-          $("body").removeClass('hide')
-          $(".sc-loader").fadeOut(1500);
-        },3500); // 3000밀리초 = 3초
-      });
+      // 3초 후에 요소의 투명도를 0으로 설정
+      setTimeout(function() {
+        $("body").removeClass('hide')
+        $(".sc-loader").fadeOut(1500);
+      },500); // 3000밀리초 = 3초
+    });
 
+
+
+
+
+  if (matchMedia("screen and (min-width: 681px)").matches) {
 
       // 사이드메뉴
+   
       $('.fix-btn').click(function(){
 
         $('.side-area, .side-item').toggleClass('on')
@@ -23,16 +31,16 @@ $(function(){
 
         scrollTrigger: {
           trigger: 'main', 
-          scrub:0.5,
-          start: '0% 0%', 
-          end: '5% 100%', 
+          scrub:0.3,
+          start: '2% 0%', 
+          end: '10% 100%', 
           markers:true
       },
           opacity:1
 
-     
       })
 
+    
 
       // about 스와이퍼
       var swiper = new Swiper(".top-swiper", {
@@ -118,6 +126,7 @@ $(function(){
 
 
 
+
     //footer 영역 
     
     const footer = gsap.timeline({
@@ -133,6 +142,40 @@ $(function(){
 
     footer.from('footer',3,{opacity:0, yPercent:50,delay:1})
 
+
+    // 680px 이상에서 사용할 스크립트
+  } else {
+    
+      //모바일 gnb
+
+      
+      $('.m-gnb .m-btn').click(function(){
+        $('.header-inner .m-menu').slideToggle()
+      });
+
+                
+    const mwork = gsap.timeline({
+
+      scrollTrigger: {
+        trigger: 'main',
+        scrub:1.8, 
+        start: '0% 0%', 
+        end: '95% 100%',
+        /* markers:true,  */
+    },
+    })
+    
+    mwork.from('.sc-work .work-item:nth-child(1)',3,{opacity:0 ,xPercent:50 ,delay:1}),
+    mwork.from('.sc-work .work-item:nth-child(2)',3,{opacity:0 ,xPercent:-50,delay:1}),
+    mwork.from('.sc-work .work-item:nth-child(3)',3,{opacity:0 ,xPercent:50,delay:1}),
+    mwork.from('.sc-work .work-item:nth-child(4)',3,{opacity:0 ,xPercent:-50,delay:1}),
+    mwork.from('.sc-work .work-item:nth-child(5)',3,{opacity:0 ,xPercent:50,delay:1}),
+    mwork.from('.sc-work .work-item:nth-child(6)',3,{opacity:0 ,xPercent:-50,delay:1})
+
+      
+
+    // 680px 미만에서 사용할 스크립트
+  }
 
 
     

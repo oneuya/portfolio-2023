@@ -456,6 +456,21 @@
         }
 
     }
-    
+
+}
+
+@media(max-width: 680px){
+
+    .sc-work{
+        .work-list{
+            display: flex;
+            flex-direction: column;
+            .work-item{
+                height: 500px;
+
+            }
+
+        }
+    }
 
 }

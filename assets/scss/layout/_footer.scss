@@ -84,3 +84,60 @@ footer{
         }
     }
 }
+
+@media(max-width: 680px){
+    footer{
+        margin-top: 0px;
+        padding-bottom: 10px;
+        .sc-contact{
+            flex-direction: column;
+            align-items: center;
+            .text-area{
+                align-items: center;
+                .title{
+                    align-items: center;
+                    font-size: 40px;
+                    .sns-area{
+                        a{
+                            width: 80px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+                a{
+                    font-size: 35px;
+                    line-height: 37px;
+
+                }
+            }
+            .cc{
+                margin-top: 50px;
+
+            }
+        }
+    }
+}
+
+@media(max-width: 425px){
+    footer{
+        .sc-contact{
+            .text-area{
+                .title{
+                    flex-direction: column;
+                    gap: 0px;
+                    font-size: 40px;
+                    line-height: 50px;
+                    .sns-area{
+                        a{
+                            height: 30px;
+                        }
+                    }
+                }
+                a{
+                    margin-top: 20px;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
