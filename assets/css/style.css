@@ -2,55 +2,55 @@
   font-family: "Pretendard";
   font-weight: 900;
   font-display: swap;
-  src: local("Pretendard Black"), url("./woff2/Pretendard-Black.woff2") format("woff2"), url("./woff/Pretendard-Black.woff") format("woff");
+  src: local("Pretendard Black"), url("/assets/fonts/Pretendard-Black.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 800;
   font-display: swap;
-  src: local("Pretendard ExtraBold"), url("./woff2/Pretendard-ExtraBold.woff2") format("woff2"), url("./woff/Pretendard-ExtraBold.woff") format("woff");
+  src: local("Pretendard ExtraBold"), url("/assets/fonts/Pretendard-ExtraBold.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 700;
   font-display: swap;
-  src: local("Pretendard Bold"), url("./woff2/Pretendard-Bold.woff2") format("woff2"), url("./woff/Pretendard-Bold.woff") format("woff");
+  src: local("Pretendard Bold"), url("/assets/fonts/Pretendard-Bold.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 600;
   font-display: swap;
-  src: local("Pretendard SemiBold"), url("./woff2/Pretendard-SemiBold.woff2") format("woff2"), url("./woff/Pretendard-SemiBold.woff") format("woff");
+  src: local("Pretendard SemiBold"), url("/assets/fonts/Pretendard-SemiBold.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 500;
   font-display: swap;
-  src: local("Pretendard Medium"), url("./woff2/Pretendard-Medium.woff2") format("woff2"), url("./woff/Pretendard-Medium.woff") format("woff");
+  src: local("Pretendard Medium"), url("/assets/fonts/Pretendard-Medium.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 400;
   font-display: swap;
-  src: local("Pretendard Regular"), url("./woff2/Pretendard-Regular.woff2") format("woff2"), url("./woff/Pretendard-Regular.woff") format("woff");
+  src: local("Pretendard Regular"), url("/assets/fonts/Pretendard-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 300;
   font-display: swap;
-  src: local("Pretendard Light"), url("./woff2/Pretendard-Light.woff2") format("woff2"), url("./woff/Pretendard-Light.woff") format("woff");
+  src: local("Pretendard Light"), url("/assets/fonts/Pretendard-Light.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 200;
   font-display: swap;
-  src: local("Pretendard ExtraLight"), url("./woff2/Pretendard-ExtraLight.woff2") format("woff2"), url("./woff/Pretendard-ExtraLight.woff") format("woff");
+  src: local("Pretendard ExtraLight"), url("/assets/fonts/Pretendard-ExtraLight.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 100;
   font-display: swap;
-  src: local("Pretendard Thin"), url("./woff2/Pretendard-Thin.woff2") format("woff2"), url("./woff/Pretendard-Thin.woff") format("woff");
+  src: local("Pretendard Thin"), url("/assets/fonts/Pretendard-Thin.woff") format("woff");
 }
 * {
   margin: 0;
@@ -155,14 +155,13 @@ body.hide {
   background-color: #141414;
   width: 100%;
   height: 100%;
-  padding: 180px 40px;
+  padding: 250px 40px;
 }
 .sc-loader .loader-inner {
   color: #fff;
   font-weight: 600;
   font-size: 75px;
-  line-height: 87px;
-  margin-top: 83px;
+  line-height: 94px;
 }
 .sc-loader .loader-inner .text-wrap {
   height: 80px;
@@ -223,7 +222,7 @@ body.hide {
   overflow: hidden;
   width: 120px;
   height: 30px;
-  z-index: 999;
+  z-index: 888;
 }
 .header .header-inner .inner-area .logo-box .logo img {
   -o-object-fit: cover;
@@ -246,7 +245,7 @@ body.hide {
 }
 .header .header-fix {
   position: fixed;
-  z-index: 888;
+  z-index: 777;
   top: 15px;
   right: 2%;
   opacity: 0;
@@ -305,7 +304,7 @@ body.hide {
   height: 50px;
   border-radius: 30px;
   color: #fff;
-  z-index: 998;
+  z-index: 1;
   transition: 0.3s;
   font-size: 15px;
 }
@@ -349,19 +348,24 @@ body.hide {
 @media (max-width: 768px) {
   .sc-loader {
     width: 100%;
+    padding: 180px 40px;
   }
   .sc-loader .loader-inner {
     width: 100%;
     margin: 0 auto;
     padding: 0;
-    line-height: 85px;
+    line-height: 89px;
     text-align: center;
   }
-  .sc-loader .loader-inner .text-first {
-    padding-right: 76px;
+  .sc-loader .loader-inner .text-wrap {
+    margin-top: 2px;
   }
 }
 @media (max-width: 680px) {
+  .sc-loader {
+    width: 100%;
+    padding: 190px 40px;
+  }
   .header .header-inner {
     display: flex;
     flex-direction: column;
@@ -382,7 +386,7 @@ body.hide {
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    z-index: 999;
+    z-index: 888;
   }
   .header .header-inner .inner-area .m-gnb .m-btn {
     font-size: 20px;
@@ -410,6 +414,22 @@ body.hide {
   }
 }
 @media (max-width: 425px) {
+  .sc-loader {
+    padding: 151px 40px;
+  }
+  .sc-loader .loader-inner {
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 62px;
+  }
+  .sc-loader .loader-inner .text-first {
+    padding: 0;
+    margin: 0;
+  }
+  .sc-loader .loader-inner .text-wrap {
+    margin-top: 2px;
+    height: 50px;
+  }
   .header .header-inner .m-menu .m-list {
     flex-direction: column;
     align-items: center;
@@ -427,8 +447,42 @@ body.hide {
   }
   .header .header-inner .m-menu .m-list .m-item {
     border: 1px solid rgba(237, 237, 237, 0.1607843137);
-    padding: 10px 15px;
+    padding: 5px 20px;
     border-radius: 999px;
+  }
+}
+@media (max-width: 425px) {
+  .sc-loader {
+    padding: 130px 40px;
+  }
+  .sc-loader .loader-inner {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 57px;
+  }
+  .sc-loader .loader-inner .text-first {
+    padding: 0;
+    margin: 0;
+  }
+  .sc-loader .loader-inner .text-wrap {
+    height: 50px;
+  }
+  .header .header-inner {
+    padding: 0;
+    border-bottom: 0px solid #000;
+  }
+  .header .header-inner .inner-area {
+    justify-content: center;
+  }
+  .header .header-inner .inner-area .logo-box {
+    margin-right: 0;
+    margin-top: 20px;
+  }
+  .header .header-inner .inner-area .logo-box .logo {
+    position: relative;
+  }
+  .header .header-inner .inner-area .m-gnb {
+    display: none;
   }
 }
 footer {
@@ -563,14 +617,9 @@ footer .sc-contact .cc {
 }
 .sc-about .about-inner .logo-area {
   padding-left: 40px;
-}
-.sc-about .about-inner .logo-area .text-box {
-  font-weight: 600;
   font-size: 75px;
+  font-weight: 600;
   line-height: 85px;
-}
-.sc-about .about-inner .logo-area .text-box .sec {
-  line-height: 70px;
 }
 .sc-about .about-inner .swiper-area {
   width: 50%;
@@ -590,8 +639,8 @@ footer .sc-contact .cc {
 }
 .sc-about .about-inner .swiper-area .area-wrapper .top-swiper .swiper-wrapper .swiper-slide .box {
   position: relative;
-  height: 300px;
   border-radius: 30px;
+  height: 300px;
   overflow: hidden;
   color: #b1b1b1;
   background: #141414;
@@ -691,11 +740,6 @@ footer .sc-contact .cc {
   width: 100%;
   height: auto;
   padding: 20px;
-}
-.sc-work .title {
-  font-size: 40px;
-  padding: 20px 40px;
-  width: 100%;
 }
 .sc-work .work-list {
   display: grid;
@@ -893,6 +937,7 @@ footer .sc-contact .cc {
   .sc-about .about-inner {
     flex-direction: column;
     gap: 100px;
+    text-align: center;
   }
   .sc-about .about-inner .logo-area {
     padding: 0;
@@ -915,5 +960,84 @@ footer .sc-contact .cc {
   }
   .sc-work .work-list .work-item {
     height: 500px;
+  }
+}
+@media (max-width: 425px) {
+  .sc-about {
+    padding: 75px 0;
+  }
+  .sc-about .about-inner {
+    gap: 55px;
+  }
+  .sc-about .about-inner .logo-area {
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 60px;
+  }
+  .sc-about .about-inner .swiper-area .area-wrapper .top-swiper {
+    width: 79%;
+  }
+  .sc-about .about-inner .swiper-area .area-wrapper .top-swiper .swiper-slide strong {
+    font-size: 17px;
+  }
+  .sc-about .about-inner .swiper-area .area-wrapper .top-swiper .swiper-slide p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 425px) {
+  .sc-about {
+    padding: 75px 0;
+  }
+  .sc-about .about-inner {
+    gap: 55px;
+  }
+  .sc-about .about-inner .logo-area {
+    font-size: 45px;
+    line-height: 55px;
+  }
+  .sc-about .ab-bg {
+    top: -10%;
+  }
+  .sc-work .work-list .work-item .text-box {
+    padding: 20px;
+  }
+  .sc-work .work-list .work-item .text-box .m {
+    display: block;
+  }
+  .sc-work .work-list .work-item .text-box .em-box em {
+    font-size: 14px;
+    padding: 5px 12px;
+  }
+  .sc-work .work-list .work-item .text-box .name {
+    font-size: 32px;
+    margin-top: 5px;
+  }
+  .sc-work .work-list .work-item .text-box .desc {
+    font-size: 14px;
+  }
+  .sc-work .work-list .work-item .text-box .work-sns {
+    font-size: 14px;
+    padding-top: 20px;
+  }
+  .sc-work .work-list .work-item .text-box .work-sns.yellow a {
+    background: #fbd46d;
+    padding: 7px 10px;
+    border-radius: 20px;
+    color: #141414;
+    font-weight: 500;
+  }
+  .sc-work .work-list .work-item .text-box .work-sns.green a {
+    background: #4F8A8B;
+    padding: 7px 13px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 500;
+  }
+  .sc-work .work-list .work-item .text-box .work-sns.gray a {
+    background: #eeeeee;
+    padding: 7px 13px;
+    border-radius: 20px;
+    color: #141414;
+    font-weight: 500;
   }
 }

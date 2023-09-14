@@ -11,11 +11,37 @@ $(function(){
       setTimeout(function() {
         $("body").removeClass('hide')
         $(".sc-loader").fadeOut(1500);
-      },500); // 3000밀리초 = 3초
+      },3000); // 3000밀리초 = 3초
     });
 
 
 
+
+      // 커서 커스텀
+      //구글 : cursor custom codepen
+
+      $(document)
+      .mousemove(function(e) {
+      $('.cursor')
+        .eq(0)
+        .css({
+          left: e.pageX,
+          top: e.pageY
+    });
+
+
+  $('.btn-box, .sns-area, .fix-btn, .gnb-item, .sns-item, .logo, .work-sns').on({
+    mouseover: function(){
+        $('.cursor').css({scale : '3',transition: 'scale 0.2s ease'});
+    },
+     mouseleave: function(){
+        $('.cursor').css({scale : '1'});
+    },
+    click: function(){
+        $('.cursor').off('mouseleave');
+    }
+});
+})
 
 
   if (matchMedia("screen and (min-width: 681px)").matches) {
@@ -60,32 +86,6 @@ $(function(){
 
 
 
-
-      // 커서 커스텀
-      //구글 : cursor custom codepen
-
-        $(document)
-          .mousemove(function(e) {
-          $('.cursor')
-            .eq(0)
-            .css({
-              left: e.pageX,
-              top: e.pageY
-        });
-
-
-      $('.btn-box, .sns-area, .fix-btn, .gnb-item, .sns-item, .logo, .work-sns').on({
-        mouseover: function(){
-            $('.cursor').css({scale : '3',transition: 'scale 0.2s ease'});
-        },
-         mouseleave: function(){
-            $('.cursor').css({scale : '1'});
-        },
-        click: function(){
-            $('.cursor').off('mouseleave');
-        }
-    });
-  })
 
 
   // about 배경
@@ -152,6 +152,45 @@ $(function(){
       $('.m-gnb .m-btn').click(function(){
         $('.header-inner .m-menu').slideToggle()
       });
+
+
+      // 사이드메뉴
+   
+      $('.fix-btn').click(function(){
+
+        $('.side-area, .side-item').toggleClass('on')
+      });
+
+      gsap.to('.header-fix',{ 
+
+        scrollTrigger: {
+          trigger: 'main', 
+          scrub:0.3,
+          start: '2% 0%', 
+          end: '10% 100%', 
+          /* markers:true */
+      },
+          opacity:1
+
+      })
+
+      
+      // about 스와이퍼
+      var swiper = new Swiper(".top-swiper", {
+        slidesPerView: "auto", 
+        loop: true,
+        loopAdditionalSlides : 1,
+        effect:'fade',
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
 
                 
     const mwork = gsap.timeline({

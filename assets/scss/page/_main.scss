@@ -13,15 +13,9 @@
 
         .logo-area{
             padding-left: 40px;
-            .text-box{
-                font-weight: 600;
-                font-size: 75px;
-                line-height: 85px;
-                .sec{
-                    line-height: 70px;
-                }
-        
-            }
+            font-size: 75px;
+            font-weight: 600;
+            line-height: 85px;
         }
         .swiper-area{
             width: 50%;
@@ -38,8 +32,8 @@
                             overflow: hidden;
                             .box{
                                 position: relative;
-                                height: 300px;
                                 border-radius: 30px;
+                                height: 300px;
                                 overflow: hidden;
                                 color: #b1b1b1;
                                 background: #141414;
@@ -155,12 +149,7 @@
     width: 100%;
     height: auto;
     padding: 20px;
-    .title{
-        font-size: 40px;
-        padding: 20px 40px;
-    width: 100%;
 
-    }
     .work-list{
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -432,6 +421,7 @@
         .about-inner{
             flex-direction: column;
             gap: 100px;
+            text-align: center;
 
             .logo-area{
                 padding: 0;
@@ -473,4 +463,114 @@
         }
     }
 
+}
+
+@media(max-width: 425px){
+
+    .sc-about{
+        padding: 75px 0;
+        .about-inner{
+            gap: 55px;
+            .logo-area{
+                font-size: 55px;
+                font-weight: 700;
+                line-height: 60px;
+            }
+            .swiper-area{
+                .area-wrapper{
+                    .top-swiper{
+                        width: 79%;
+                        .swiper-slide{
+                            strong{
+                                font-size: 17px;
+                            }
+                            p{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 425px){
+
+    
+    .sc-about{
+        padding: 75px 0;
+        .about-inner{
+            gap: 55px;
+            .logo-area{
+                font-size: 45px;
+                line-height: 55px;
+            }
+        }
+
+        .ab-bg{
+            top: -10%;
+        }
+    }
+
+    .sc-work{
+        .work-list{
+            .work-item{
+                .text-box{
+                    padding: 20px;
+                    .m{
+                        display: block;
+                    }
+                    .em-box{
+                        em{
+                            font-size: 14px;
+                            padding: 5px 12px;
+
+                        }
+                    }
+                    .name{
+                        font-size: 32px;
+                        margin-top: 5px;
+                        
+                    }
+                    .desc{
+                        font-size: 14px;
+
+                    }
+                    .work-sns{
+                        font-size: 14px;
+                        padding-top: 20px;
+                        &.yellow{
+                            a{
+                                background: #fbd46d;
+                                padding: 7px 10px;
+                                border-radius: 20px;
+                                color: #141414;
+                                font-weight: 500;
+                            }
+                        }
+                        &.green{
+                            a{
+                                background: #4F8A8B;
+                                padding: 7px 13px;
+                                border-radius: 20px;
+                                color: #fff;
+                                font-weight: 500;
+                            }
+                        }
+                        &.gray{
+                            a{
+                                background: #eeeeee;
+                                padding: 7px 13px;
+                                border-radius: 20px;
+                                color: #141414;
+                                font-weight: 500;
+                            }
+                    }
+                }
+            }
+        }
+    }
+
+}
 }
